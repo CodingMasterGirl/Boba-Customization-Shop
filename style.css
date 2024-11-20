@@ -1,0 +1,143 @@
+/* General Styling for the Section */
+#boba-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#boba-cup {
+    width: 150px;
+    height: 250px;
+    background-color: #fce6c7; /* Tea color */
+    border: 5px solid #c49b72; /* Cup outline */
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#boba-pearls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 80%;
+    z-index: 2; /* Pearls in front of milk */
+}
+
+.boba-pearl {
+    width: 20px;
+    height: 20px;
+    background-color: #6b4226; /* Pearl color */
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 2s infinite;
+}
+
+.boba-blue {
+    background-color: #1e90ff; /* Blue pearl color */
+}
+
+.boba-red {
+    background-color: #ff6347; /* Red pearl color */
+}
+
+/* Milk Layer */
+#boba-milk {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ffffff; /* White milk color */
+    z-index: 1; /* Milk behind pearls and toppings */
+    transition: height 0.5s ease;
+}
+
+/* Straws */
+#boba-straws {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Position at the right side of the cup */
+    z-index: 3; /* Straw in front of pearls and milk */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.straw {
+    width: 12px; /* Width of the straw */
+    height: 180px; /* Height of the straw */
+    background: linear-gradient(to top, #FF87C0, #FFB6C1, #FF6347, #FFD700, #32CD32, #1E90FF); /* Cute pastel gradient */
+    border-radius: 10px; /* Rounded corners for cuteness */
+    position: relative;
+    animation: bounce 1.2s ease-out; /* Animation to bounce the straw */
+}
+
+.straw .flower {
+    width: 20px;
+    height: 20px;
+    background-color: #FF69B4; /* Pink flower color */
+    border-radius: 50%; /* Make it circular */
+    position: absolute;
+    top: -10px; /* Position above the straw */
+    left: 50%;
+    transform: translateX(-50%); /* Center the flower */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for a cute look */
+}
+
+/* Bounce animation for straw */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-60px); /* Higher bounce */
+    }
+    50% {
+        transform: translateY(30px); /* Settle down a bit */
+    }
+    70% {
+        transform: translateY(-15px); /* Small bounce */
+    }
+    100% {
+        transform: translateY(0); /* End at the bottom */
+    }
+}
+
+/* Buttons Styling */
+button {
+    background-color: #ff7f50; /* Coral */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff6347; /* Tomato */
+}
+
+#boba-quote {
+    font-style: italic;
+    color: #8b4513;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#message-box {
+    margin-top: 20px;
+}
+
+#message-box textarea {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ff6347;
+    font-size: 1em;
+}
+
+#message-box button {
+    margin-top: 10px;
+    background-color: #32cd32; /* Green for submission button */
+}
